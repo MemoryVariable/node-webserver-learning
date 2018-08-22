@@ -18,11 +18,11 @@ app.use((req, res,next)=>{
    // next();
 });
 
-app.use((req,res,next)=>{
-    res.render('maintenance.hbs',{
-        page_title:'Oops!!Bad Link'
-    })
-});
+// app.use((req,res,next)=>{
+//     res.render('maintenance.hbs',{
+//         page_title:'Oops!!Bad Link'
+//     })
+// });
 
 hbs.registerPartials(__dirname+'/views/partials');
 hbs.registerHelper('getCurrentYear',()=>{
@@ -64,7 +64,6 @@ app.get('/bad',(req,res)=>{
     "ErrMsg":"Unable to handle request"
     });
 });
-
 
 app.use(express.static(__dirname+'/public'));
 
